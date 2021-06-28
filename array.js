@@ -90,5 +90,5 @@ console.log(fruits);
 console.log(fruits.indexOf('lemon')); // 그냥 indexOf 는 앞에서 부터 해서 중복되는 값 있으면 앞자리 부터 알려줌
 console.log(fruits.lastIndexOf('lemon')); // lastindexOf 는 끝에서 부터 검색해서 오기때문에 뒷자리 부터 알려줌
 
-#
+
 
