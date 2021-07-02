@@ -10,22 +10,21 @@
 
 console.log('1');
 setTimeout(() =>
-    console.log('2')
-,1000);    
+    console.log('2'), 1000);
 console.log('3');
 
 // 콜백도 두 종류 
 //Synchronous callback : 동기적 콜백 ======================================
-function printImmediately(print){
+function printImmediately(print) {
     print();
 }
-printImmediately(()=>console.log("hello"))
+printImmediately(() => console.log("hello"))
 
 // Asynchronous callback : 언제 실행될지 모르는 비동기적 콜백 ======================================
-function printwithDelay(print,timeout){
-    setTimeout(print,timeout);
+function printwithDelay(print, timeout) {
+    setTimeout(print, timeout);
 }
-printwithDelay(()=>console.log("async callback"),2000);
+printwithDelay(() => console.log("async callback"), 2000);
 
 // Javascript 엔진이 구동하는 원리에 따르면 함수 선언은 가장 위로 올라간다 
 // 즉 function printlmmediately 랑 printwithDelay 는 가장 위에서 선언되어 올라가고 
@@ -35,12 +34,55 @@ printwithDelay(()=>console.log("async callback"),2000);
 
 //12 분 부터 다시 보기 
 // 콜백 지옥 ? example
-class UserStorage{
-    loginUser(id, password, onSuccess, onError){
-
+class UserStorage {
+    loginUser(id, password, onSuccess, onError) {
+        setTimeout(() => {
+            if (
+                (id === 'min' && password === 'dream') ||
+                (id === 'coder' && password === 'academy')
+            ) {
+                onSuccess(id);
+            } else {
+                onError(new Error('not found'));
+            }
+        }, 2000);
     }
 
-    getRoles(){
-        
+    getRoles(user, onSuccess, onError) {
+        setTimeout(() => {
+            if (user === 'min') {
+                onSuccess({
+                    name: 'min',
+                    role: 'admin'
+                });
+            } else {
+                onError(new Error('no access'));
+            }
+        }, 1000);
+
     }
 }
+
+// 아래 코드의 문제점 : 콜백안에 콜백이 연계되어 있어서 가독성 , 효율 너무 안좋다 
+// 
+const userStorage = new UserStorage();
+const id = prompt('enter your id');
+const password = prompt('enter your password');
+userStorage.loginUser(
+    id,
+    password,
+    user => {
+        userStorage.getRoles(
+            user,
+            (userWithRole) => {
+                alert(`hello ${userWithRole.name},you have a ${userWithRole.role}`)
+            },
+            (error) => {
+                console.log(error);
+            }
+        )
+    },
+    error => {
+        console.log(error)
+    }
+)
