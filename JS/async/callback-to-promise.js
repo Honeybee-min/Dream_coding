@@ -32,11 +32,11 @@ class UserStorage {
     }
 }
 
-// 아래 코드의 문제점 : 콜백안에 콜백이 연계되어 있어서 가독성 , 효율 너무 안좋다 
-// 
+
 const userStorage = new UserStorage();
 const id = prompt('enter your id');
 const password = prompt('enter your password');
+
 userStorage
 .loginUser(id,password)
 .then(user =>userStorage.getRoles(user))

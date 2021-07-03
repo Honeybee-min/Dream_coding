@@ -6,7 +6,7 @@ const name = 'min';
 const age = 4;
 print(name,age)
 //이렇게 함수를 만들어서 사용하면 매번 만들거나 암튼 비효율적임 (사실 이유 잘 모름;)
-function print(name) {
+function print(name,age) {
     console.log(name);
     console.log(age);
 }
@@ -33,7 +33,7 @@ console.log(min.hasJob);
 
 
 // 2. Computed properties [ 계산된 properties ]
-// ket 는 반드시 string 타입으로 가져와야 한다 [그 외 타입은 x ]
+// key 는 반드시 string 타입으로 가져와야 한다 [그 외 타입은 x ]
 // object 는 접근 방법이 아래처럼 . 로 혹은 배열에서 string 타입에 받아오는거 가능
 console.log(min.name);
 console.log(min['name']);
@@ -67,7 +67,7 @@ const person5 = new makePerson1('habin',12);
 console.log(person5);
 function makePerson1(name,age){
     // 여기서 생략된것들 - > this = {}; return this;
-    this.naem = name;
+    this.name = name;
     this.age = age;
 }
 
