@@ -1,0 +1,20 @@
+div,span{
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+}
+
+div{
+    display: block;
+    background-color: red;
+}
+
+span{
+    display: inline;
+    background-color: blue;
+}
+
+#inlineBlock{
+    display: inline-block;
+    background-color: green;
+}

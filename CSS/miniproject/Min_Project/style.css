@@ -1,0 +1,32 @@
+div {
+    display: inline-block;
+    display:flex;
+}
+
+#head {
+    font-size: 1.5rem;
+    width: 100%;
+    height: 10%;
+    background-color: royalblue;   
+    justify-content:space-between;
+    align-items : center;
+}
+
+.logo {
+    font-size: 3rem;
+    color: white;
+}
+a{
+  
+}
+
+.nav {
+  
+  font-size:1.7rem;
+   
+
+}
+
+.sns{
+  
+}

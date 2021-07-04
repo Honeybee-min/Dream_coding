@@ -1,0 +1,41 @@
+div{
+    width: 50px;
+    height: 50px;
+    margin: 14px;
+    background-color: red;
+}
+.container{
+    background-color: yellow;
+    left: 20px;
+    top: 20px;
+    position: relative;
+}
+
+.box{
+    background-color: blue;
+    left: 20px;
+    top: 20px;
+    position: sticky;
+}
+
+/* 
+
+position 의 기본 값 : static
+
+★position : relative 
+relative 는 원래 아이템이 있어야할 자리에서
+상대적으로 지정한 위치만큼 밀려남
+
+★position : absolute
+absolute 는 해당 아이템이 담겨 있는 상자[컨테이너 ?] 안에서 
+지정한 위치만큼 밀려남 
+[잘 이해 못했음]
+
+★ position : fixed
+지정한 위치만큼 밀려나는 대상이 어떤 태그가 아니고
+윈도우 자체에서 밀려나는것 즉 제일 최상위에서 해당 px 만큼 밀려남
+
+★ position : sticky
+처음 지정된 위치에 계속 있음 단 
+스크롤을 해도 그 위치를 벗어나지 않음
+*/

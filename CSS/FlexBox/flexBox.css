@@ -1,0 +1,112 @@
+/*
+★Flex Box 는 메인 Container 과 
+그 container level 의 속성값과  item level 의 속성값이 다르고 또 필요하는 태그가 다르다
+그리고 중심축과 반대축 개념이 필요하다 아이템들이 정렬되어 있는 
+방향이 중심축이 되고 그와 수직이 되는 축이 반대축이다 
+아래 코드는 가로로 123456~~~ 가 나열되기 때문에 가로가 중심
+위에서 아래방향이 반대축이 된다 ★
+
+
+♥ Container lever 의 속성값들 설명
+１ . 우선 , 메인 container 에 diplay 로 flex 라고 선언을 해준다 그럼 왼쪽에서 오른쪽으로 자동 정렬된다
+
+2 . 그리고 flex-direction 을 통해서 어디서 어디로 item 들이 정렬되는지 지정해준다
+[ 기본값은 row : 왼쪽에서 오른쪽이다 , row-reverse 를 하면 오른쪽에서 왼쪽으로 정렬된다]
+[ column 으로 하면 위에서 아래로 정렬되는데 이러면 중심축이 수직축이 된다]
+
+3.  그리고 flex-wrap 은 기본값 nowrap  [ html 에서 만약 아래 코드에서 div 코드가 추가되어도 한줄안에 전부 출력하기 위해 내용들이 짜부가 되면서 출력이 된다
+[ 만약 wrap 으로 바꾸면 한줄에 꽉차면 다음 라인으로 알아서 넘어감]
+[ 마찬가지로 reverse가 있다 , 거꾸로 밀려남 ]
+
+4. 최종적으로 flex-flow 는 위에 direction , wrap 을 한번에 쓸수 있는 녀석이다
+[ 예전에 border 에 px , color , attribute 따로 지정안하고 border:1px solid black 으로 쓰면 1px 짜리 검정색 일자선이 나오는거처럼]
+[ flex-flow : column nowrap 이라고 쓰면 정렬을 column(위에서 아래정렬) 자동 밀림이 nowrap 으로 자동으로 안밀리게 설정 하는거다]
+/////// 정리하면 4번까지는 flex-flow 에 대해서 배웠다 !!! ////////
+
+이제는 아이템을 어떻게 배치할껀지에 대해 알아보자 ~
+
+5. justify-content 는 아이템을 어떻게 배치할지 지정해준다
+[기본값 : flex-start (처음부터 끝(만약 중심축이 수평이라면 왼쪽에서 오른쪽으로 , 수직이라면 위에서 아래로) ]
+[ flex-end 는 이제 아이템배치가 끝에서 배치된다 (!!! 헷갈리는 포인트 : 내용은 똑같이 12345~~ 로 정렬되는데 배치가 오른쪽에 붙어서 배치된다 ) ]
+[위에 direction 에서 reverse 랑 헷갈리면 안됨 direction reverse 는 배치가 거꾸로 되지만 내용도 거꾸로 정렬되는데 이건 배치만 밑(혹은 오른쪽)에서 시작함]
+[center 로 배치하면 아이템들을 1234~ 순서대로 중앙에 배치한다]
+[space-around 라는 놈도 있다 배치를 하되 간격을 띄워서 배치함 단, 맨 왼쪽과 맨 오른쪽 애들은 끝 기준 한 스페이스만 들어감]
+[space-evenly 는 around 랑 비슷하지만 맨 끝과 맨 처음도 똑같이 스페이스가 들어감]
+[space-between 도 있음 이건 맨 왼쪽이랑 맨 끝은 스페이스 없고 중간 내용들만 스페이스 들아감]
+////// 정리하면 중심죽에서 아이템을 어떻게 배치할지 지정하는 녀석이다 !!/ //////
+
+
+6 . align-item 은 중심축 아니고 반대축에서 아이템을 어떻게 배치할건지 지정해준다
+[ 개념 : container 내부 item 들이 정렬되어 있는 방향에 따라 수평이 될수도 수직이 될수도 있다
+만약 수평으로 정렬이 되어있다면 수평이 중심축 수직이 반대축, 수직으로 정렬되어 있으면 수직이 중심축 , 수평이 반대축이다 ]
+[justify-content 는 중심축의 아이템 배치 방향을 정해줬다면 align-item 은 반대축의 아이템 배치방향을 정해준다]
+[ex ) 중심축이 수평 즉 1 2 3 4 5 6 7 ~ 으로 배치되어 있다면 반대축은 수직이다 이상태에서 align-item 을 center로 지정해주면 배치가 수직상 중앙에 배치된다 ]
+[ baseline 이라는 놈은 만약 1번 item 이 padding 이 있어서 내용이 조금 밀리거나 하면 그 item 들을 모두 감싸고 있는 container 에 baseline 을 지정해주면 1번이 그런 문제가 생겨도 나머지도 전부 그 위치로 지정해준다]
+
+
+
+
+♥ item lever 의 속성값들 설명
+1. order 를 지정할수 있다 [ 잘 사용안하니 X ]
+[html 기본값은 0으로 order 지정없이 html 순서대로 정렬되지만 order 를 번호를 지정해주면 html 순서가 아닌 order 순서대로 정렬된다]
+
+2. flex-grow 를 지정할수 있다 
+[flex-grow 를 지정하지 않으면 .item 을 width:40px height:40px 로 창 크기가 변하던 계속 유지가 된다 ]
+[grow 지정은 비율로한다 item1 은 2 item2,item3 은 1로 하면  창 크기가 변할때 창을 2:1:1 로 item 들이 채운다  ]
+
+3. flex-shrink 를 지정할수 있다
+[flex-shrink 를 지정하면 위에 grow 랑 비슷한 느낌으로 줄어들때 줄어드는 비율을 조정할 수 있다]
+
+4 . flex-basis 를 지정할수 있다
+[flex-basis 는 위에 grow 가 늘어날때의 비율을 지정 shrink 는 줄어들때의 비율을 지정해준다면 basis는 줄어들거나 늘어날때의 통합적인 비율을 지정해준다]
+
+5 . align-self 를 사용할 수 있다
+[ container 에서 justify-content 가 item 의 전체를 배치를 지정해준다면
+align-self 는 지정한 item 하나하나의 위치를 배치해줄수 있다 .item1 align-self : center 를 하면 .item1의 클래스를 가진 아이템만 배치가 center 되고 나머지는 여전히 기본값으로 배치된다
+*/
+
+
+
+.container{
+    background-color: beige;
+    height: 100vh;
+    display: flex;
+
+}
+
+.item{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.item1{
+    background-color: red;
+}
+.item2{
+    background-color: orange;
+}
+.item3{
+    background-color: yellow;
+}
+.item4{
+    background-color: green;
+}
+.item5{
+    background-color: greenyellow;
+}
+.item6{
+    background-color: blue;
+}
+.item7{
+    background-color: violet;
+}
+.item8{
+    background-color:purple;
+}
+.item9{
+    background-color:black;
+}
+.item10{
+    background-color: white;
+}
