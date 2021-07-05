@@ -1,32 +1,97 @@
-div {
-    display: inline-block;
-    display:flex;
+body{
+    margin: 0;
 }
 
-#head {
-    font-size: 1.5rem;
-    width: 100%;
-    height: 10%;
-    background-color: royalblue;   
-    justify-content:space-between;
-    align-items : center;
+li{
+    list-style: none;
 }
 
-.logo {
-    font-size: 3rem;
+a{
+    text-decoration: none;
     color: white;
 }
-a{
-  
+
+#container{
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    font-size: 2rem;
+    align-items: center;
 }
 
-.nav {
-  
-  font-size:1.7rem;
-   
+
+#logo ul{
+    display: flex;
+    padding-left: 0;
+}
+
+#logo li{
+    padding: 8px 7px;
+}
+
+#menubar ul{
+    display: flex;
+    padding-left: 0;
+    
+}
+
+#menubar li{
+    font-size: 1.5rem;
+    padding: 8px 12px;
+}
+
+#menubar li:hover{
+    background-color: thistle;
+}
+
+#sns{
+    display: flex;
+}
+
+#sns li{
+    padding: 8px 5px;
+}
+
+@media screen and (max-width:800px) {
+    #container{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #logo li{
+        align-items: flex-end;
+    }
+
+    #menubar{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #menubar ul{
+        flex-direction: column;
+    }
+
+    #menubar li{
+        width: 100%;
+        text-align: center;
+    }
+
+    #sns{
+        justify-content: center;
+        width: 100%;
+    }
+
+    #sns ul{
+        padding-left: 0;
+        
+
+    }
+
+
+
+
 
 }
 
-.sns{
-  
-}
