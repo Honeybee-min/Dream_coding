@@ -1,0 +1,134 @@
+* {
+    list-style: none;
+    font-family: fantasy;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: brown;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: wheat;
+    padding: 2px 12px;
+    font-size: 2.5rem;
+    align-items: center;
+}
+
+.nav_logo {
+    display: flex;
+    padding-left: 0px;
+    margin: 0;
+
+}
+
+.nav_logo li {
+    padding: 8px 5px;
+
+
+}
+
+.nav_menu {
+    margin: 0;
+    display: flex;
+    padding: 0;
+
+}
+
+
+.nav_menu li {
+    padding-left: 0;
+    padding: 8px 12px;
+    font-size: 2rem;
+}
+
+.nav_menu li:hover {
+    background-color: lightcoral;
+    border-radius: 4px;
+}
+
+.nav_sns {
+    margin: 0;
+    display: flex;
+    padding-left: 0;
+}
+
+.nav_sns li {
+    padding: 8px 7px;
+    font-size: 1.5rem;
+
+}
+
+.fab.fa-youtube {
+    color: red;
+}
+
+.fab.fa-twitter-square {
+    color: blue;
+}
+
+.nav_sns li:hover {
+    background-color: lightskyblue;
+    border-radius: 2px;
+}
+
+.togle_btn {
+    position: absolute;
+    right: 15px;
+    padding-top: 10px;
+    display: none;
+
+}
+
+
+@media screen and (max-width:800px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav_menu {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;
+    }
+
+    .nav_menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav_menu li:hover {
+        border-radius: 8px;
+    }
+
+    .nav_sns {
+        display: none;
+        padding-top: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .togle_btn {
+        display: block;
+    }
+
+    .nav_sns.active,
+    .nav_menu.active {
+        display: flex;
+    }
+
+
+
+
+
+
+
+}
