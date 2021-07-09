@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/92598207bf.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <!--
+fab fa-youtube
+fas fa-search
+fas fa-ellipsis-v
+fas fa-caret-down
+fas fa-thumbs-up
+fas fa-thumbs-down
+fas fa-share
+fas fa-plus
+fab fa-font-awesome-flag
+-->
+</head>
+
+<body>
+    <!-- HEADER-->
+    <header>
+        <div class="logo">
+            <span><i class="fab fa-youtube"></i></span>
+            <span><a href="#">YouTube</a></span>
+        </div>
+        <div class="tabs">
+            <span><button><i class="fas fa-search"></i></button></span>
+            <span><button><i class="fas fa-ellipsis-v"></i></button></span>
+        </div>
+    </header>
+
+
+    <!--VIDEO-->
+    <section class="video">
+        <video controls>
+            <source src="/media/cc0-videos/flower.webm" type="video/webm">
+
+            <source src="/media/cc0-videos/flower.mp4" type="video/mp4">
+
+            Sorry, your browser doesn't support embedded videos
+        </video>
+    </section>
+
+    <!--VIDEO INFORMATION-->
+    <section class="video-info">
+        <ul class="video-hash">
+            <li>#CODING</li>
+            <li>#DREA_CODING</li>
+            <li>#JEONG-MIN</li>
+        </ul>
+        <div class="video-title">
+            <div>
+                클론코딩 유튜브 사이트 따라 만들기(HTML+CSS 연습편, 웹 포트폴리오) | 프론트엔드 개발자 입문편: HTML, CSS, Javascript
+            </div>
+
+            <i class="fas fa-caret-down"></i>
+        </div>
+        <ul class="video-tool">
+            <li><button><i class="fas fa-thumbs-up"></i>
+                    <div>1K</div>
+                </button></li>
+            <li><button><i class="fas fa-thumbs-down"></i>
+                    <div>0</div>
+                </button></li>
+            <li><button><i class="fas fa-share"></i>
+                    <div>Share</div>
+                </button></li>
+            <li><button><i class="fas fa-plus"></i>
+                    <div>Save</div>
+                </button></li>
+            <li><button><i class="fab fa-font-awesome-flag">
+                        <div>Declaration</div>
+                    </i></button></li>
+        </ul>
+    </section>
+
+
+    <section class="channel">
+        <span class="channel-info">
+            <div class="channel-img"><img class="channel-img-img" src="img/channel.jpg" alt="엘리 이미지"></div>
+            <div class="channel-owner-info">
+                <div class="channel-name">드림코딩 by 엘리</div>
+                <div class="channel-subscriber">1M Subscriber</div>
+            </div>
+        </span>
+        <button>Subscriber</button>
+    </section>
+    <section class="upNext">
+        <div class="upNext-board">Up Next</div>
+        <ul class="upNext-list">
+            <li class="item">
+                <img class="upnext-img" src="img/item1.gif" alt="item1" />
+                <div class="upnext-title">
+                    <a href="#">HTML 태그 완성, 웹 포트폴리오 만들기 전에 꼭 보세요 | 프론트엔드 개발자 입문편: HTML, CSS,
+                        Javascript</a>
+                </div>
+                <div class="upnext-name">드림코딩 by 엘리</div>
+                <span class="upnext-view">12k View</span>
+            </li>
+            <li class="item">
+                <img class="upnext-img" src="img/item2.gif" alt="item1" />
+                <span class="upnext-title"><a href="#">HTML 태그 완성, 웹 포트폴리오 만들기 전에 꼭 보세요 | 프론트엔드 개발자 입문편: HTML, CSS,
+                        Javascript</a></span>
+                <span class="upnext-name">드림코딩 by 엘리</span>
+                <span class="upnext-view">12k View</span>
+            </li>
+            <li class="item">
+                <img class="upnext-img" src="img/item3.gif" alt="item1" />
+                <span class="upnext-title"><a href="#">HTML 태그 완성, 웹 포트폴리오 만들기 전에 꼭 보세요 | 프론트엔드 개발자 입문편: HTML, CSS,
+                        Javascript</a></span>
+                <span class="upnext-name">드림코딩 by 엘리</span>
+                <span class="upnext-view">12k View</span>
+            </li>
+        </ul>
+
+    </section>
+</body>
+
+</html>
