@@ -1,4 +1,4 @@
-'user strict';
+'use strict';
 
 // Promise 는 비동기적인 것을 수행할때 callback 함수 대신 유용히 사용하는 object
 //포인트 1 . 상태 ( 수행중인지 , 수행 완료 후 성공 ? 실패인지 )
