@@ -1,0 +1,35 @@
+
+{
+    "items" : [
+        
+        {
+            "name" : "pink_t",
+            "sex" : "femail",
+            "size" : "large size",
+            "img" : "./img/pink_t.png"
+
+        },
+
+        {
+            "name" : "blue_t",
+            "sex" : "mail",
+            "size" : "small size",
+            "img" : "./img/blue_t.png"
+
+        },
+        {
+            "name" : "blue_p",
+            "sex" : "mail",
+            "size" : "large size",
+            "img" : "./img/blue_p.png"
+        },
+        {
+            "name" : "pink_t",
+            "sex" : "mail",
+            "size" : "large size",
+            "img" : "./img/pink_t.png"
+        }
+
+    ]
+
+}
