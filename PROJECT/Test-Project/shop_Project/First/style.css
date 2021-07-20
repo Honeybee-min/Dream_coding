@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -8,96 +8,107 @@
 }
 
 
-header{
+header {
     display: flex;
     justify-content: center;
     padding: 8px 12px;
 }
-img{
+
+img {
     width: 70px;
     transition: all 0.2s linear;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.2);
 }
-section{
+
+section {
     padding: 8px 12px;
     font-size: 18px;
-    font-family: "Uchen Regular",serif;
+    font-family: "Uchen Regular", serif;
 }
 
-section{
+section {
     display: flex;
     justify-content: center;
 }
 
-section *{
+
+section ul {
+    width: 60%;
+    height: 20%;
+}
+
+section li {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+}
+
+section img {
     background-color: white;
 }
 
-section ul{
-    width: 530px;
-}
-
-section li{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+section div {
+    background-color: white;
 }
 
 
 
 
-.main_logo img{
+.main_logo img {
     width: 100px;
 }
 
-.nav_container{
+.nav_container {
     padding: 8px 12px;
 }
 
-.nav_container ul{
+.nav_container ul {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.dress{
+.dress {
     padding: 20px;
 }
 
-.color_btn{
+.color_btn {
     margin: 10px;
 }
 
-.color_btn button{
+.color_btn button {
     padding: 15px;
 }
 
-.blue{
+.blue {
     background-color: skyblue;
-   
+
 }
-.yellow{
+
+.yellow {
     background-color: gold;
 }
 
-.pink{
+.pink {
     background-color: pink;
 }
-.dress_img{
+
+.dress_img {
     margin-right: 10px;
 }
-.sex{
+
+.sex {
     margin-right: 10px;
 }
 
-
-
-
-
-
-
-
-
+.items ul {
+    width: 60%;
+    height: 50%;
+    background-color: white;
+}
